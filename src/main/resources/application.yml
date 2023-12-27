@@ -1,0 +1,17 @@
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+  config:
+    name: spring-boot-kubernetes
+
+management:
+  endpoint:
+    health:
+      group:
+        custom:
+          include:
+            - diskSpace
+            - ping
+          show-components: always
+          show-details: always
