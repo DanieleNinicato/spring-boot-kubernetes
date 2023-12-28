@@ -10,6 +10,6 @@ class SpringBootKubernetesApplicationTests {
 
 	@Test
 	void contextLoads() {
-		log.info("Loading context...");
+		log.info("Loading context");
 	}
 }
