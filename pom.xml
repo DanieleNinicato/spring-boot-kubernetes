@@ -45,6 +45,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<builder>paketobuildpacks/builder-jammy-tiny</builder>
+						<name>danieleninicato/${project.artifactId}:v2</name>
+					</image>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
