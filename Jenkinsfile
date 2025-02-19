@@ -8,6 +8,7 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
+                sh 'docker version'
             }
         }
 
