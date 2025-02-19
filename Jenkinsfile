@@ -1,5 +1,10 @@
 pipeline {
 
+    tools {
+        maven 'Maven 3.6.3'
+        jdk 'Adopt Openjdk21.0.1+12'
+    }
+
     agent any
 
     stages {
@@ -8,7 +13,7 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                sh 'docker version'
+                sh "mvn -T 2C clean package"
             }
         }
 
@@ -23,6 +28,7 @@ pipeline {
 
             steps {
                 echo 'deploying application spring-boot-kubernetes'
+                sh 'docker version'
             }
         }
     }
