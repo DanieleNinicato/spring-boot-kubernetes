@@ -20,6 +20,7 @@ pipeline {
                 echo 'building application spring-boot-kubernetes'
                 sh 'echo JAVA_HOME=$JAVA_HOME'
                 sh 'echo PATH=$PATH'
+                sh 'java -version'
             }
         }
 
