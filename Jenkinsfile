@@ -18,8 +18,8 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                sh "java -version"
-                sh "mvn -version"
+                echo ${tool 'Adopt Openjdk21.0.1+12'}
+                echo '${tool 'Adopt Openjdk21.0.1+12'}/jdk-21.0.1+12'
             }
         }
 
