@@ -2,6 +2,7 @@ pipeline {
 
     tools {
         maven 'Maven 3.6.3'
+        jdk 'Adopt Openjdk21.0.1+12'
     }
 
     agent any
