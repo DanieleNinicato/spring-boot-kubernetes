@@ -12,8 +12,7 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                sh 'java -version'
-                sh 'mvn -version'
+                sh "mvn -T 2C clean package"
             }
         }
 
