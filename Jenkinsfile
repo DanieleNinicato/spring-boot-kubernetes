@@ -2,7 +2,7 @@ pipeline {
 
     tools {
         maven 'Maven 3.6.3'
-        jdk 'jdk21'
+        jdk 'Adopt Openjdk21.0.1+12'
     }
 
     environment {
