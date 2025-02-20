@@ -13,7 +13,7 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                echo '$JAVA_HOME'
+                echo $JAVA_HOME
                 sh "java -version"
                 sh "mvn -version"
             }
