@@ -18,8 +18,7 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                echo ${tool 'Adopt Openjdk21.0.1+12'}
-                echo '${tool 'Adopt Openjdk21.0.1+12'}/jdk-21.0.1+12'
+                sh 'echo JAVA_HOME=$JAVA_HOME'
             }
         }
 
