@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        JAVA_HOME = "${tool 'jdk21'}"
+        JAVA_HOME = "${tool 'Adopt Openjdk21.0.1+12'}"
         MVN_HOME = "${tool 'Maven 3.6.3'}"
     }
 
