@@ -7,6 +7,7 @@ pipeline {
 
     environment {
         JAVA_HOME = "${tool 'Adopt Openjdk21.0.1+12'}"
+        MVN_HOME = "${tool 'Maven 3.6.3'}"
     }
 
     agent any
@@ -19,6 +20,7 @@ pipeline {
                 echo 'building application spring-boot-kubernetes'
                 sh 'echo JAVA_HOME=$JAVA_HOME'
                 sh 'echo PATH=$PATH'
+                sh 'echo java -version'
                 sh 'echo mvn -version'
             }
         }
