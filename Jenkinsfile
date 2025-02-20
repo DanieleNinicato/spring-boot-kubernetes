@@ -18,10 +18,10 @@ pipeline {
 
             steps {
                 echo 'building application spring-boot-kubernetes'
-                sh 'echo JAVA_HOME=$JAVA_HOME'
-                sh 'echo PATH=$PATH'
-                sh 'echo java -version'
-                sh 'echo mvn -version'
+                echo 'JAVA_HOME='$JAVA_HOME
+                echo 'PATH='$PATH
+                echo java -version
+                echo mvn -version
             }
         }
 
