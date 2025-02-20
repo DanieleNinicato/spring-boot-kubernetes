@@ -7,7 +7,6 @@ pipeline {
 
     environment {
         JAVA_HOME = "${tool 'Adopt Openjdk21.0.1+12'}"
-        PATH = "${JAVA_HOME}/bin:${env.PATH}" // Ensure JDK bin is in PATH
     }
 
     agent any
@@ -20,7 +19,7 @@ pipeline {
                 echo 'building application spring-boot-kubernetes'
                 sh 'echo JAVA_HOME=$JAVA_HOME'
                 sh 'echo PATH=$PATH'
-                sh 'java -version'
+                sh "mvn -T 2C clean package"
             }
         }
 
