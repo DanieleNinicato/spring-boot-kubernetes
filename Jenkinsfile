@@ -19,7 +19,7 @@ pipeline {
                 echo 'building application spring-boot-kubernetes'
                 sh 'echo JAVA_HOME=$JAVA_HOME'
                 sh 'echo PATH=$PATH'
-                sh "mvn -T 2C clean package"
+                sh 'which java'
             }
         }
 
