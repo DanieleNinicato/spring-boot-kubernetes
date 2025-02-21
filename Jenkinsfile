@@ -27,7 +27,7 @@ pipeline {
 
             steps {
                 echo 'deploying application spring-boot-kubernetes'
-                sh 'docker version'
+                sh "mvn spring-boot:build-image"
             }
         }
     }
