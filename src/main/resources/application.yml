@@ -18,3 +18,7 @@ management:
             - ping
           show-components: always
           show-details: always
+
+spring-boot-kubernetes:
+  properties:
+    version: 1.0
