@@ -51,7 +51,7 @@
 				<configuration>
 					<image>
 						<builder>paketobuildpacks/builder-jammy-tiny</builder>
-						<name>danieleninicato/${project.artifactId}:v2</name>
+						<name>danieleninicato/${project.artifactId}:v3</name>
 					</image>
 				</configuration>
 			</plugin>
