@@ -16,7 +16,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -29,3 +28,9 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+    - name: Build and Push Docker Image
+      run: |
+        mvn spring-boot:build-image
+        docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        docker push docker.io/${{ secrets.DOCKER_USERNAME }}/spring-boot-kubernetes:v3
