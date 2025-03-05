@@ -38,7 +38,7 @@ jobs:
         # Extract major, minor, and patch versions
         MAJOR=$(echo $VERSION | cut -d. -f1)
         MINOR=$(echo $VERSION | cut -d. -f2)
-        PATCH=$(echo $VERSION | cut -d. -f3 | sed 's/-SNAPSHOT//')
+        PATCH=$(echo $VERSION | cut -d. -f3)
 
         # Increment patch version
         NEW_PATCH=$((PATCH + 1))
@@ -62,9 +62,11 @@ jobs:
 #        docker push docker.io/${{ secrets.DOCKER_USERNAME }}/spring-boot-kubernetes:0.0.1
 
     - name: Commit Updated pom.xml
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config --global user.name "Daniele Ninicato"
+        it config --global user.name "Daniele Ninicato"
         git config --global user.email "daniele.ninicato@gmail.com"
         git add pom.xml
-        git commit -m "Bump version to $NEW_VERSION"
-        git push
+        git commit -m "Bump version to $NEW_VERSION" || echo "No changes to commit"
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
