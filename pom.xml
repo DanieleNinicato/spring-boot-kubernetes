@@ -12,7 +12,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>spring-boot-kubernetes</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>spring-boot-kubernetes</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -51,7 +51,7 @@
 				<configuration>
 					<image>
 						<builder>paketobuildpacks/builder-jammy-tiny</builder>
-						<name>danieleninicato/${project.artifactId}:v3</name>
+						<name>danieleninicato/${project.artifactId}:${version}</name>
 					</image>
 				</configuration>
 			</plugin>
