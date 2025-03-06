@@ -78,4 +78,4 @@ jobs:
         github-token: ${{ secrets.github_token }}
 
     - name: Print Version
-      run: "echo 'New Version: ${{steps.bump.outputs.version}}'"
+      run: "echo 'New version: ${{steps.bump.outputs.version}}'"
